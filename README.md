@@ -1,8 +1,7 @@
 # CRUD
 > Hola! Soy estudiante de desarrollo web fullstack de la Formación Formar dictada por Digital House, 
 > esta es una práctica personal de CRUD, en los siguientes videos voy a explicar su funcionamiento y 
-> su código. También dejaré una explicación con capturas por si
-> los videos se vuelven engorrosos o vicersa.
+> su código. También dejaré una explicación con capturas.
 
 ## Video explicación funcionamiento:
 
