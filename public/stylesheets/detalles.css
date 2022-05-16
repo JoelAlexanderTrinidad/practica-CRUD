@@ -1,0 +1,9 @@
+.botones a{
+    color: white;
+    width: 120px;
+}
+
+.detalles__precio{
+    color: rgb(14, 201, 14);
+    font-size: 40px;
+}

@@ -1,0 +1,9 @@
+.ver-mas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ver-mas h5{
+    height: 50px;
+    width: 100%;
+}

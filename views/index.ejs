@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body class="container col-12 col-md-6 col-lg-8">
+    <%- include('./partials/header') %>
+    <main class="mt-4">
+      <section class="row justify-content-center">
+        <% productos.forEach(producto => { %>         
+          <a class="index__section-article col-12 col-sm-5 col-lg-3" href="/products/detalles/<%= producto.id %>">
+            <article class=" border mx-3 my-3 shadow-sm p-3 mb-5 bg-white rounded">
+              <img src="../images/products/<%= producto.image %>" alt="">
+              <hr>
+              <p class="index__precio">$<%= producto.price %></p>
+              <h4 class="index__nombre"><%= producto.name %></h4>
+            </article>
+          </a>
+        <% }) %>
+      </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

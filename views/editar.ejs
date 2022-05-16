@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+
+<body class="container col-12 col-md-6 col-lg-8">
+    <%- include('./partials/header') %>
+    
+    <main>
+        <section class="my-3 col-12 col-md-8 col-lg-8 mx-auto border shadow">
+            <form  class="mx-3 mt-2 " action="/products/actualizar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <h2 class="bg-light">EDITAR PRODUCTO: <%= producto.name %> </h2>
+                <article>
+                    
+                    <div class="row">
+                        <div  class="row mt-4">
+                            <div class="col-12 col-md-6 col-lg-6 ">
+                                <label for="nombre">NOMBRE DEL PRODUCTO</label>
+                                <input class="col-12 type="text" id="name" name="name" value="<%= producto.name %>">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-5">
+                                <label for="precio">PRECIO</label>
+                                <input class="" type="number" id="precio" name="price" value="<%= producto.price %>">
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <label for="description" >Descripción:</label>
+                            <textarea placeholder="<%= producto.description %>" name="description" id="description" class="agregarProducto-textarea" style="resize: none;" rows="3" cols="60"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="image">IMAGEN</label>
+                            <input type="file" id="image" name="image" accept="image/*">
+                        </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3" >
+                            <button type="reset" class="me-2 btn btn-secondary">Limpiar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                </article>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<%- include('./partials/head') %>
+
+<body class="container col-12 col-md-6 col-lg-8">
+    <%- include('./partials/header') %>
+    <main>
+        <% if (busqueda.length > 0) { %>
+            <h3 class="mt-4">RESULTADO DE LA BÚSQUEDA: <%= keyword %></h3>
+            <div class="d-flex row justify-content-evenly mt-3">
+            <% busqueda.forEach(producto => { %>    
+                    <div class="card my-4" style="width: 300px;">
+                        <img src="/images/products/<%= producto.image %>" class="card-img-top" alt="...">
+                        <div class="card-body ver-mas">
+                          <h5 class="card-title"><%= producto.name %></h5>
+                          <a href="/products/detalles/<%= producto.id %>" class="btn btn-primary">VER MÁS</a>
+                        </div>
+                    </div>
+            <% }) %>
+            </div>         
+        <% } else { %>
+            <div class="alert alert-warning mt-5">
+                No se encontraron resultados para:      <%= keyword %>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

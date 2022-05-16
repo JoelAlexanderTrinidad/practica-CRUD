@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+<body class="container col-12 col-md-6 col-lg-8">
+    <%- include('./partials/header') %>
+
+    <main class="row justify-content-center mt-5">
+        <article>
+            <div class="card bg-light">
+                <div class="row g-0">
+                  <div class="col-5 col-sm-4 ">
+                    <img src="/images/products/<%= producto.image %>" class="img-fluid w-100 " alt="card-horizontal-image">
+                  </div>
+                  <div class="col-7 col-sm-8">
+                    <div class="card-body row" style="height: 100%;">
+                      <h5 class="card-title"><%= producto.name %></h5>
+                      <p class="detalles__precio">$<%= producto.price %></p>
+                      <p class=""><%= producto.description %></p>
+                      <div class=" d-flex justify-content-evenly pt-4 botones" style="height: 60px;">
+                          <form action="/products/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-primary ms-5 bg-danger">ELIMINAR</button>
+                          </form>
+                          <a href="/products/editar/<%= producto.id %>" class="btn btn-primary me-5">EDITAR</a>                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </article>
+    </main>
+
+</body>
+</html>
